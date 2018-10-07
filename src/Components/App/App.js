@@ -56,7 +56,7 @@ class App extends React.Component {
 //method to reset the playlist and search results
   resetPlaylist() {
     console.log(`New playlist created, start new search!`);
-    window.location ='http://ruseful-jammming.surge.sh/';
+    window.location ='http://localhost:3000/';
   }
 
   render() {

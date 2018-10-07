@@ -1,6 +1,6 @@
 
-const clientId = 'c78aa03bc4b34a62863b650a64ed1b56'; // insert Spotify client ID
-const redirectURI = 'http://ruseful-jammming.surge.sh/';
+const clientId = ''; // insert Spotify client ID
+const redirectURI = 'http://localhost:3000/';//insert redirect page
 
 let accessToken;
 //stores functionality to interact with Spotify
@@ -20,7 +20,7 @@ const Spotify = {
       const expiresIn = Number(expiresInMatch[1]);
       //wipe the access token and URL paramaters
       window.setTimeout(() => accessToken = '', expiresIn * 1000);
-      window.history.pushState('Access Token', null, '/'); 
+      window.history.pushState('Access Token', null, '/');
       return accessToken;
     } else {
       const accessURL = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`;
